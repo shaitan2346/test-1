@@ -1,7 +1,7 @@
 // импортируем функцию plusOne
 const { plusOne,  sum } = require('./module-1/functions');
 
-console.log('Hello!!!');
+console.log('Привет!!!');
 
 const a = 5, b = 7;
 
