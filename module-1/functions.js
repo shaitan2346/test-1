@@ -1,4 +1,3 @@
-console.log('Test');
 function plusOne(num) {
     return num + 1;
 }
@@ -12,8 +11,8 @@ function plusOne(num) {
 function sum(x, y) {
     let result = x;
     let i = 1;
-    
-    while(i <= y) {
+
+    while (i <= y) {
         result = plusOne(result);
         i = plusOne(i);
     }
@@ -40,7 +39,7 @@ function mul(x, y);
     y - number,
     return x / y
 */
-function div(x, y) ;
+function div(x, y);
 
 
 // экспортируем функции:
