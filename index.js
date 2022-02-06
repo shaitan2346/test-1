@@ -7,8 +7,8 @@ console.log('');
 const a = 69, b = 3;
 
 console.log('plusOne(', a, ') = ', plusOne(a));
-console.log('sum(', a, ',', b, ') = ', sum(a, b));
-console.log('sub(', a, ',', b, ') = ', sub(a, b));
+console.log('sum(', a, ',', b, ') = ', sum(0, 0));
+console.log('sub(', a, ',', b, ') = ', sub(-1, 5));
 console.log('mult(', a, ',', b, ') = ', mult(a, b));
 console.log('div(', a, ',', b, ') = ', div(a, b));
 

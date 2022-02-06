@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lebedev-Mikhail/test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lebedev-Mikhail/test/issues"
+  },
+  "homepage": "https://github.com/Lebedev-Mikhail/test#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.5.0"
+  }
+}
