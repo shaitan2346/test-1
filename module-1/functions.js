@@ -2,39 +2,44 @@
 function plusOne(arg) {
     return arg + 1;
 }
-//Вычитание (Работает с положительными и отрицательными аргументами)
+//Вычитание 
 function sub(a, b) {
-    let c = 0;
+    let i = 0;
+    let result;
     if (a > b) {
         while (b < a) {
             b = plusOne(b);
-            c = plusOne(c);
+            i = plusOne(i);
         }
-        return c;
+        result = i;
     }
     else if (a < b) {
         while (a < b) {
             a = plusOne(a);
-            c = plusOne(c)
+            i = plusOne(i)
         }
-        return -c;
+        result = -i;
     }
+    else {
+        result = i;
+    }
+    return result;
 }
 
-//Сложение (Работает с положительными и отрицательными аргументами)
+//Сложение 
 function sum(a, b) {
     let i = 0;
     let result;
-    if(a >= 0 && b >= 0 ) {
+    if (a >= 0 && b >= 0) {
         result = a;
         while (i < b) {
             i = plusOne(i);
             result = plusOne(result);
         }
     }
-    else if(a < 0 && b >= 0) {
+    else if (a < 0 && b >= 0) {
         return sub(b, -a);
-    } else if(a >= 0  && b < 0) {
+    } else if (a >= 0 && b < 0) {
         return sub(a, -b)
     } else {
         a = -a;
@@ -50,36 +55,69 @@ function sum(a, b) {
     return result;
 
 }
-// Умножение (Работает с положительными и отрицательными аргументами)
+// Умножение 
 function mult(a, b) {
-    let d = 0;
-    let c = 0;
-    if (d < a) {
-        while (d < a) {
-            d = plusOne(d);
-            c = sum(c, b);
-        }
-        return c;
+    let i = 0;
+    let result = 0;
+    if (i <= a) {
+        while (i < a) {
+            i = plusOne(i);
+            result = sum(result, b);
+        }    
     }
-    else if (d > a) {
+    else if (i >= a) {
         a = -a;
-        while (d < a) {
-            d = plusOne(d);
-            c = sum(c, b);
+        while (i < a) {
+            i = plusOne(i);
+            result = sum(result, b);
         }
-        return -c;
+        result = -result;
     }
+    return result;
 }
-//Деление (Работает только с положительными аргументами)
+//Деление 
 function div(a, b) {
-    let c = 0;
-    let d = -1;
-    while (c <= a) {
-        d = plusOne(d);
-        c = sum(c, b);
+    let result;
+    let i = 0;
+    let k = b;
+    if (a >= 0 && b > 0) {
+        while (b <= a) {
+            i = plusOne(i);
+            b = sum(b, k);
+        }
+        result = i;
     }
-    return d;
+    else if (a < 0 && b < 0) {
+        while (b >= a) {
+            i = plusOne(i);
+            b = sum(b, k);
+        }
+        result = i;
+    }
+    else if (a >= 0 && b < 0) {
+        a = -a;
+        while (b >= a) {
+            i = plusOne(i);
+            b = sum(b, k);
+        }
+        result = -i;
+    }
+    else if (a < 0 && b > 0) {
+        a = -a;
+        while (b <= a) {
+            i = plusOne(i);
+            b = sum(b, k);
+        }
+        result = -i;
+        
+    }
+    else {
+        result = 'infinity';
+    }
+    return result;
 }
+
+
 module.exports = {
     plusOne: plusOne,
     sum: sum,
