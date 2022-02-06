@@ -23,31 +23,31 @@ function sub(a, b) {
 
 //Сложение (Работает с положительными и отрицательными аргументами)
 function sum(a, b) {
-    let c = 0;
-    if (c < a, c < b) {
-        while (c < b) {
-            c = plusOne(c);
-            a = plusOne(a);
+    let i = 0;
+    let result;
+    if(a >= 0 && b >= 0 ) {
+        result = a;
+        while (i < b) {
+            i = plusOne(i);
+            result = plusOne(result);
         }
-        return a;
     }
-    else if (c > a, c > b) {
+    else if(a < 0 && b >= 0) {
+        return sub(b, -a);
+    } else if(a >= 0  && b < 0) {
+        return sub(a, -b)
+    } else {
         a = -a;
         b = -b;
-        while (c < b) {
-            c = plusOne(c);
-            (a) = plusOne(a);
+        result = a;
+        while (i < b) {
+            i = plusOne(i);
+            result = plusOne(result);
         }
-        return -a;
+        result = -result;
     }
-    else if (c > a, c < b) {
-        a = -a;
-        while (a < b) {
-            a = plusOne(a);
-            c = plusOne(c);
-        }
-        return c;
-    }
+
+    return result;
 
 }
 // Умножение (Работает с положительными и отрицательными аргументами)
